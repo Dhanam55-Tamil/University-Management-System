@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="departments.html">Departments</a>
+</nav>
+
+<div class="dept-layout">
+  <!-- Side Menu -->
+  <div class="side-nav">
+    <a href="files/BA-ENGLISH.pdf" target="_blank">📘 Syllabus</a>
+    <a href="files/fees details.pdf" target="_blank">Fees</a>
+    <a href="files/english faculty.pdf " target="_blank">Faculty PDF</a>
+    <a href="#">📂 PDFs</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="dept-content">
+    <h2>Department of English</h2>
+
+<div class="upload-section">
+
+  <div class="upload-box">
+
+    <h4>Faculty Form</h4>
+  
+    <a href="files/A.ANBARASI.pdf " target="_blank">A.ANBARASI</a>,
+    <a href="files/G.KALAIYARASI.pdf " target="_blank">G.KALAIYARASI</a>,
+    <a href="files/J.NAJIN.pdf" target="_blank">J.NAJIN</a>,
+    <a href="files/J.PRIYA.pdf " target="_blank">J.PRIYA</a>,
+    <a href="files/E.SRIPRIYA.pdf " target="_blank">E.SRIPRIYA</a>
+    <a href="files/P.MEKALA.pdf " target="_blank">P.MEKALA</a>,
+    <a href="files/R.KAYALVIZHI.pdf " target="_blank">R.KAYALVIZHI</a>,
+    <a href="files/S.ILAKKIYA.pdf" target="_blank">S.ILAKKIYA</a>
+    
+  </div>
+  </div>
+
+
+    <div class="upload-box">
+  <h3>Upload PDF (Demo)</h3>
+
+  <input type="file" id="pdfFile" accept="application/pdf" />
+  <br><br>
+
+  <button id="uploadBtn">Upload</button>
+
+  <p id="uploadMsg" style="margin-top:10px; font-weight:bold;"></p>
+</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("uploadBtn").addEventListener("click", function () {
+    const fileInput = document.getElementById("pdfFile");
+    const msg = document.getElementById("uploadMsg");
+
+    if (fileInput.files.length === 0) {
+      msg.style.color = "red";
+      msg.innerText = "Please select a PDF file first!";
+      return;
+    }
+
+    // Demo success message
+    msg.style.color = "green";
+    msg.innerText = "File uploaded successfully (Demo Only) ✅";
+  });
+</script>
+</body>
+</html>

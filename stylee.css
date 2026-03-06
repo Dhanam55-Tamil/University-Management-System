@@ -1,0 +1,9 @@
+body{font-family:Arial;background:#f2f4f7;padding:30px}
+form{background:#fff;padding:20px;border-radius:10px;max-width:360px}
+input,button{width:100%;padding:10px;margin:8px 0}
+button{background:#0b3c5d;color:#fff;border:0;cursor:pointer}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
+.card{background:#fff;padding:12px;border-radius:10px;text-align:center}
+.card img{width:120px;height:150px;object-fit:cover;border-radius:8px;background:#eee}
+

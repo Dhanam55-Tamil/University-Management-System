@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h2>Our Faculty</h2>
+  <div id="facultyGrid" class="grid"></div>
+
+  <script>
+    const grid = document.getElementById("facultyGrid");
+    const list = JSON.parse(localStorage.getItem("facultyList")) || [];
+
+    if(list.length === 0){
+      grid.innerHTML = "<p>No faculty added yet.</p>";
+    } else {
+      list.forEach(f => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <img src="${f.photo}" alt="">
+          <h4>${f.name}</h4>
+          <p>${f.designation}</p>
+          <p>${f.dept}</p>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

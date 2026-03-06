@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us</title>
+
+<style>
+  body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#141e30,#243b55);
+    color:#fff;
+  }
+
+  h1{
+    text-align:center;
+    padding:30px 0 10px;
+    letter-spacing:1px;
+  }
+
+  .contact-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    padding:30px;
+  }
+
+  .card{
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border-radius:20px;
+    padding:25px;
+    width:350px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.4);
+  }
+
+  .card h2{
+    margin-bottom:15px;
+    font-size:22px;
+    border-bottom:2px solid rgba(255,255,255,0.3);
+    padding-bottom:8px;
+  }
+
+  .info p{
+    font-size:16px;
+    margin:12px 0;
+  }
+
+  .info span{
+    font-size:20px;
+    margin-right:10px;
+  }
+
+  .map-box{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 15px 30px rgba(0,0,0,0.5);
+  }
+
+  iframe{
+    width:100%;
+    height:450px;
+    border:0;
+  }
+
+  footer{
+    text-align:center;
+    padding:15px;
+    background:#0f172a;
+    font-size:14px;
+  }
+
+  .contact-cards{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:40px 0;
+}
+
+.card{
+  background:white;
+  padding:20px;
+  width:250px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.3);
+}
+
+.contact-form{
+  background:white;
+  padding:30px;
+  width:90%;
+  max-width:500px;
+  margin:40px auto;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+}
+
+.contact-form button{
+  background:#0b8f3f;
+  color:white;
+  border:none;
+  padding:12px;
+  width:100%;
+  cursor:pointer;
+  border-radius:8px;
+}
+#topBtn{
+  position:fixed;
+  bottom:30px;
+  right:30px;
+  background:#0b8f3f;
+  color:white;
+  border:none;
+  padding:15px;
+  border-radius:50%;
+  cursor:pointer;
+  display:none;
+}
+body {
+  color: #111;   /* dark black text */
+}
+
+
+</style>
+<script>
+function sendMsg(){
+  alert("✅ Message sent successfully (Demo)");
+}
+</script>
+
+<script>
+window.onscroll = function(){
+  document.getElementById("topBtn").style.display =
+  window.scrollY > 200 ? "block" : "none";
+}
+
+function goTop(){
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>📍 Contact Us</h1>
+
+<div class="contact-container">
+
+  <div class="card info">
+    <h2>College Details</h2>
+    <p><span>🏫</span>Government Arts and Science College</p>
+    <p><span>📍</span> Jayankondam- 621802</p>
+    <p><span>🗺️</span>Ariyalur District, Tamil Nadu</p>
+    <p><span>📞</span>Phone: +91 9442359395</p>
+    <p><span>📧</span>Email: gacsjayankondam@gmail.com</p>
+  </div>
+
+</div>
+<div class="contact-cards">
+  <div class="card">
+    📍 <h3>Address</h3>
+    <p>Pudhusavadi, Jayankondam<br>Ariyalur District</p>
+  </div>
+
+  <div class="card">
+    📞 <h3>Phone</h3>
+    <p>Office Hours Only</p>
+  </div>
+
+  <div class="card">
+    📧 <h3>Email</h3>
+    <p>govartscollege@gmail.com</p>
+  </div>
+</div>
+
+<!-- GOOGLE MAP -->
+<div class="map-box">
+<iframe 
+  src="https://www.google.com/maps?q=Government+Arts+and+Science+College+Jayankondam+Pudhusavadi&output=embed"
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</div>
+<div class="contact-form">
+  <h2>Send Us a Message</h2>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="email" id="email" placeholder="Your Email">
+  <textarea id="msg" placeholder="Your Message"></textarea>
+  <button onclick="sendMsg()">Send Message</button>
+</div>
+
+<footer>
+© 2026 Government Arts and Science College | Jayankondam
+</footer>
+<!-- GOOGLE MAP SECTION START -->
+<div style="
+  width:90%;
+  max-width:900px;
+  margin:40px auto;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+">
+
+  
+</body>
+<button id="topBtn" onclick="goTop()">⬆</button>
+</html>

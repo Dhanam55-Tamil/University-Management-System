@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="departments.html">Departments</a>
+</nav>
+
+<div class="dept-layout">
+  <!-- Side Menu -->
+  <div class="side-nav">
+    <a href="files/BSc-COMPUTER-SCIENCE.pdf" target="_blank">📘 Syllabus</a>
+    <a href="files/fees details.pdf" target="_blank">💰 Fees</a>
+    <a href="files/cs faculty.pdf" target="_blank">👨‍🏫 Faculty PDF</a>
+    <a href="#">📂 PDFs</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="dept-content">
+    <h2>Department of Computer Science</h2>
+
+    <div class="dept-photos">
+      <img src="images/dept/cs1.jpeg">
+   </div>
+
+    <div class="upload-box">
+  <h3>Upload PDF (Demo)</h3>
+
+  <input type="file" id="pdfFile" accept="application/pdf" />
+  <br><br>
+
+  <button id="uploadBtn">Upload</button>
+
+  <p id="uploadMsg" style="margin-top:10px; font-weight:bold;"></p>
+</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("uploadBtn").addEventListener("click", function () {
+    const fileInput = document.getElementById("pdfFile");
+    const msg = document.getElementById("uploadMsg");
+
+    if (fileInput.files.length === 0) {
+      msg.style.color = "red";
+      msg.innerText = "Please select a PDF file first!";
+      return;
+    }
+
+    // Demo success message
+    msg.style.color = "green";
+    msg.innerText = "File uploaded successfully (Demo Only) ✅";
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="card">
+  <img id="photo" src="images/faculty/default.png">
+  <h2 id="fname"></h2>
+  <p><b>Department:</b> <span id="dept"></span></p>
+  <p><b>Designation:</b> <span id="desig"></span></p>
+  <p><b>Qualification:</b> <span id="qual"></span></p>
+  <p><b>Email:</b> <span id="email"></span></p>
+  <p><b>Mobile:</b> <span id="mobile"></span></p>
+</div>
+
+<script src="scrpt.js"></script>
+</body>
+</html>
+<script>
+  const f = JSON.parse(localStorage.getItem("selectedFaculty"));
+
+  if (!f) {
+    window.location.href = "faculty-login.html";
+  }
+
+  document.getElementById("fname").innerText = f.name;
+  document.getElementById("dept").innerText = f.dept;
+  document.getElementById("desig").innerText = f.designation;
+  document.getElementById("qual").innerText = f.qualification || "-";
+  document.getElementById("email").innerText = f.email || "-";
+  document.getElementById("mobile").innerText = f.mobile || "-";
+
+  document.getElementById("photo").src =
+    f.photo && f.photo !== "" ? f.photo : "images/faculty/default.png";
+    
+</script>

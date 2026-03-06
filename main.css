@@ -1,0 +1,51 @@
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #47b2e4;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+.description {
+  text-align: center;
+  line-height: 1.8;
+  margin: 15px auto;
+  max-width: 900px;
+}
+.principal-section {
+  background-color: #f3e5f5; 
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.principal-section .content {
+  max-width: 90px;
+  margin: auto;
+}
+
+.principal-section h3 {
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.principal-section p {
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 15px;
+  color: #222;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.principal-section img {
+  max-height: 150px;
+  width: 120;
+  object-fit: cover;
+  border-radius: 8px;
+}
